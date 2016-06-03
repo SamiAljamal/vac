@@ -1,5 +1,3 @@
-#survey div.icon div {
-float: left;
-width: 25px;
-height: 50px;
+#newyork, #beach, #camping, #europe{
+  display: none;
 }
