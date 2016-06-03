@@ -2,7 +2,6 @@ $(document).ready(function() {
   $("form#survey").submit(function(event){
     var tally = 0;
     var finished = true;
-
     for(var i=1; i<7; i++ ){
       var num= i.toString();
       var check = parseInt($("input:radio[name="+num+"]:checked").val());
@@ -12,7 +11,6 @@ $(document).ready(function() {
         finished = false;
       }
     }
-
     var destination= ""
     if(finished){
       if(tally <=6){
@@ -28,11 +26,6 @@ $(document).ready(function() {
 
     }
     event.preventDefault();
-
-
-
-
-
   });
 
 });
