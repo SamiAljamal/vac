@@ -1,3 +1,9 @@
-#newyork, #beach, #camping, #europe{
-  display: none;
+.img{
+  width: 100%;
+}
+
+input[type="radio"] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  -ms-appearance: checkbox;
 }
