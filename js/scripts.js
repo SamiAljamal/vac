@@ -14,33 +14,42 @@ $(document).ready(function() {
     var destination= ""
     if(finished){
 
-      if(tally <=6){
+      if(tally <=40){
         destination="You're going to New York!";
         $("#newyork").show()
         $("#beach").hide();
         $("#camping").hide();
         $("#europe").hide();
-      } else if (tally <= 12){
+      } else if (tally <= 70){
         destination="You're Headed to the Beach to relax!";
         $("#newyork").hide()
         $("#beach").show();
         $("#camping").hide();
         $("#europe").hide();
-      } else if (tally <= 18){
-        destination="You'll Be enjoying the great outdoors!"
+      } else if (tally <= 100){
+        destination="You'll Be enjoying the great outdoors!";
         $("#newyork").hide()
         $("#beach").hide();
         $("#camping").show();
         $("#europe").hide();
       } else{
-        destination="You'll be enjoying Europe!"
+        destination="You'll be enjoying Europe!";
         $("#newyork").hide()
         $("#beach").hide();
         $("#camping").hide();
         $("#europe").show();
       }
 
+    }else {
+      destination= "Please finish the quiz";
+      $("#newyork").hide()
+      $("#beach").hide();
+      $("#camping").hide();
+      $("#europe").hide();
+
+
     }
+
 
     $("#result").text(destination);
     $("#myModal").modal("show");
