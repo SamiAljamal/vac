@@ -5,14 +5,30 @@ $(document).ready(function() {
 
     for(var i=1; i<7; i++ ){
       var num= i.toString();
-      var check = parseInt($("input:checkbox[name="+num+"]:checked").val());
+      var check = parseInt($("input:radio[name="+num+"]:checked").val());
       if(check){
         tally += check;
       }else{
         finished = false;
       }
     }
-    alert(tally);
+
+    var destination= ""
+    if(finished){
+      if(tally <=6){
+        $("#newyork").show();
+
+      } else if (tally <= 12){
+        $("#beach").show();
+      } else if (tally <= 18){
+        $("#camping").show();
+      } else{
+        $("#europe").show();
+      }
+
+    }
+    event.preventDefault();
+
 
 
 
